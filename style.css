@@ -1,0 +1,26 @@
+:root{--navy:#10132f;--gold:#e5ad35;--white:#fff;--muted:#c9cbd6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:var(--navy);color:var(--white);font-family:Montserrat,Arial,sans-serif;display:flex;justify-content:center;padding:28px 16px 40px}
+.page{width:min(100%,440px);text-align:center}
+.hero{height:255px;position:relative;border-radius:22px;overflow:visible;background:#25283b;box-shadow:0 18px 50px rgba(0,0,0,.28)}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;border-radius:22px}
+.hero:after{content:"";position:absolute;inset:0;border-radius:22px;background:linear-gradient(180deg,rgba(16,19,47,.12),rgba(16,19,47,.58) 75%,rgba(16,19,47,.9));}
+.profile{position:relative;z-index:2;margin-top:-78px;display:flex;flex-direction:column;align-items:center}
+.logo-wrap{width:150px;height:150px;border-radius:50%;padding:5px;background:var(--gold);box-shadow:0 9px 28px rgba(0,0,0,.38);overflow:hidden}
+.logo{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:4px solid var(--navy)}
+h1{font-size:25px;letter-spacing:2px;margin:18px 0 5px;font-weight:800}
+.tagline{font-size:10px;letter-spacing:5px;color:var(--gold);font-weight:700;margin:0 0 22px}
+.socials{display:flex;justify-content:center;align-items:center;gap:17px;margin:0 0 27px}
+.social{width:47px;height:47px;border:1px solid rgba(229,173,53,.8);border-radius:50%;display:grid;place-items:center;color:var(--gold);transition:.22s ease;text-decoration:none;background:rgba(255,255,255,.025)}
+.social:hover,.social:focus-visible{background:var(--gold);color:var(--navy);transform:translateY(-3px);outline:none}
+.social svg{width:21px;height:21px;fill:currentColor}
+.actions{display:grid;gap:13px;margin:0 auto;width:100%}
+.action{min-height:58px;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.35px;transition:transform .2s,box-shadow .2s,background .2s}
+.action:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(0,0,0,.22)}
+.action svg{width:19px;height:19px;fill:currentColor}
+.primary{background:var(--gold);color:var(--navy)}
+.secondary{border:1px solid var(--gold);color:var(--gold);background:transparent}
+.footer{margin-top:34px;color:rgba(255,255,255,.48);font-size:9px;letter-spacing:2px}
+@media(max-width:380px){.hero{height:225px}.logo-wrap{width:136px;height:136px}h1{font-size:22px}.tagline{letter-spacing:3.5px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
